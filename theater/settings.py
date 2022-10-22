@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "movies",
     "shared",
+    "users",
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -67,13 +68,14 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = "theater.wsgi.application"
-
+LOGIN_URL = '/login/'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -121,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "static/"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
